@@ -30,3 +30,27 @@ function listening() {
     console.log(`server running on localhost: ${port}`);
     console.log(`http://localhost:${port}/`);
 }
+
+// GET Route
+app.get('/all', getData)
+
+function getData(req, res) {
+    res.send(projectData)
+    console.log('get projectData', projectData)
+}
+
+// POST Route
+app.post('/weatherData', weatherData);
+
+function weatherData(req, res) {
+    console.log('post req.body', req.body)
+    newEntry = {
+        temperature: req.body.main.temp,
+        date: req.body.lastupdate.value,
+        userResponse: req.body.content
+    }
+
+    projectData.push(newEntry)
+    res.send(projectData)
+    console.log('post projectData', projectData)
+}
