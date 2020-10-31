@@ -46,7 +46,7 @@ function weatherData(req, res) {
     console.log('post req.body', req.body)
     newEntry = {
         temperature: req.body.main.temp,
-        date: req.body.lastupdate.value,
+        date: req.body.newDate,
         userResponse: req.body.content
     }
 
