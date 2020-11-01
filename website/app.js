@@ -3,7 +3,7 @@
 // Base URL for OpenWeatherMap API to optain current weather data by ZIP code
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
 // Personal API Key for OpenWeatherMap API
-let apiKey = '&appid=7e3d290cd442823876bb07faec6a3a8e';
+const apiKey = '&appid=7e3d290cd442823876bb07faec6a3a8e';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -14,7 +14,7 @@ document.getElementById('generate').addEventListener('click', performAction);
 
 /* Function called by event listener */
 function performAction(e) {
-    const userResponse = document.getElementById('content').value;
+    const userResponse = document.getElementById('feelings').value;
     const zipCode = document.getElementById('zip').value;
 
     getWebData(baseURL, zipCode, apiKey)
@@ -64,3 +64,14 @@ const postData = async (url = '', data = {}) => {
     }
 }
 /* Function to GET Project Data */
+const updateUI = async () => {
+    const request = await fetch('/all');
+    try {
+        const allData = await request.json();
+        document.getElementById('date').innerHTML = `Date: ${allData.date}`;
+        document.getElementById('temp').innerHTML = `Temperature: ${allData.temperature} kelvin`;
+        document.getElementById('content').innerHTML = `Your feeling: ${allData.userResponse}`;
+    } catch (error) {
+        console.log("error", error);
+    }
+}

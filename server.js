@@ -31,8 +31,6 @@ function listening() {
     console.log(`http://localhost:${port}/`);
 }
 
-const wData = [];
-
 // GET Route
 app.get('/all', getData)
 
@@ -46,13 +44,10 @@ app.post('/weatherData', weatherData);
 
 function weatherData(req, res) {
     console.log('post req.body', req.body)
-    newEntry = {
-        temperature: req.body.temperature,
-        date: req.body.date,
-        content: req.body.content
-    }
+    let wData = req.body;
+    projectData["temperature"] = wData.temperature
+    projectData["date"] = wData.date
+    projectData["userResponse"] = wData.userResponse
 
-    wData.push(newEntry)
-    res.send(projectData)
     console.log('post projectData', projectData)
 }
