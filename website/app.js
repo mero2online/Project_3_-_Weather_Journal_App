@@ -61,7 +61,7 @@ const getWebData = async (baseURL, zipCode, apiKey) => {
 /* Function to POST data */
 const postData = async (url = '', data = {}) => {
     console.log('postData', data)
-    const response = await fetch(url, {
+    const res = await fetch(url, {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
@@ -71,13 +71,14 @@ const postData = async (url = '', data = {}) => {
     });
 
     try {
-        const newData = await response.json();
+        const newData = await res.json();
         return newData
     } catch (error) {
         console.log("error", error);
         // appropriately handle the error
     }
 }
+
 /* Function to GET Project Data */
 const updateUI = async () => {
     const request = await fetch('/all');

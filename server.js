@@ -49,5 +49,6 @@ function weatherData(req, res) {
     projectData["date"] = wData.date
     projectData["userResponse"] = wData.userResponse
 
+    res.send(projectData)
     console.log('post projectData', projectData)
 }
