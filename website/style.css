@@ -5,12 +5,12 @@ body {
 
 #app {
   display: grid;
-  grid-auto-rows: minmax(150px, auto);
-  /* grid-template-columns:  */
+  grid-auto-rows: minmax(1em, auto);
+  grid-template-columns: 1fr;
   height: 100vh;
-  background: #f23557;
+  background-image: linear-gradient(#f23557, #f00997, #f23557);
   color: #f0d43a;
-  justify-content: center;
+  justify-items: center;
   grid-gap: 1em;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
@@ -20,10 +20,12 @@ body {
 }
 
 .entry {
-  background: rgba(59, 74, 107, 0.4);
+  background: #3b4a6b66;
+  min-width: 400px;
 }
 
 #entryHolder {
+  color: #ffa600;
 }
 
 #date {
@@ -33,6 +35,8 @@ body {
 }
 
 #content {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .headline {
@@ -58,9 +62,10 @@ input {
 }
 
 button {
-  width: 400px;
-  height: 100px;
-  background: #3b4a6b;
+  display: block;
+  width: 300px;
+  height: 80px;
+  background-image: linear-gradient(#3b4a6b, #0975f0, #3b4a6b);
   color: #f0d43a;
   font-size: 26px;
   font-family: "Oswald", sans-serif;
