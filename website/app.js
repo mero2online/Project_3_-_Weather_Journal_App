@@ -6,8 +6,23 @@ let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
 const apiKey = '&appid=7e3d290cd442823876bb07faec6a3a8e';
 
 // Create a new date instance dynamically with JS
+let month = {
+    0: "January",
+    1: "February",
+    2: "March",
+    3: "April",
+    4: "May",
+    5: "June",
+    6: "July",
+    7: "August",
+    8: "September",
+    9: "October",
+    10: "November",
+    11: "December"
+}
+
 let d = new Date();
-let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
+let newDate = month[d.getMonth()] + '.' + d.getDate() + '.' + d.getFullYear();
 
 // Event listener to add function to existing HTML DOM element
 document.getElementById('generate').addEventListener('click', performAction);
