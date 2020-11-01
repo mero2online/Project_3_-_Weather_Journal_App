@@ -1,10 +1,22 @@
 # Weather-Journal App Project
 
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+## Main Object
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+This project is to create an **asynchronous** web app that uses ***Web API*** and user data to dynamically update the UI in a Weather Journal application.
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+## Objects
+1. How to use Node and Express Environment.
+2. Project Dependencies.
+3. Setup Local Server.
+4. Create API credentials
+5. Dealing with HTTP Requests & Routes (GET & POST).
+6. Asynchronous JavaScript.
+7. Chaining Promises
+---
+### License
+
+Weather-Journal App Project is Copyright © 2020 Udaciy.
+It is open source project, and redistributed under the terms specified in the
+[LICENSE] file.
+
+[license]: https://github.com/mero2online/Project_3_-_Weather_Journal_App/blob/master/LICENSE
