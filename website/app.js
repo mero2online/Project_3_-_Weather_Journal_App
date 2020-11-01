@@ -2,6 +2,7 @@
 
 // Base URL for OpenWeatherMap API to optain current weather data by ZIP code
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
+
 // Personal API Key for OpenWeatherMap API
 const apiKey = '&appid=7e3d290cd442823876bb07faec6a3a8e';
 
