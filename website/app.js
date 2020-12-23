@@ -52,6 +52,9 @@ const getWebData = async (baseURL, zipCode, apiKey) => {
     try {
         const data = await res.json();
         console.log('getWebData', data)
+        document.getElementById('date').innerHTML = `Date: ${data.date}`;
+        document.getElementById('temp').innerHTML = `Temperature: ${data.temperature} kelvin`;
+        document.getElementById('content').innerHTML = `Your feeling: ${data.userResponse}`;
         return data;
     } catch (error) {
         console.log("error", error);
